@@ -15,6 +15,7 @@ const searchStates = async searchText => {
     //make INPUTBOX EMPTY RETURN EMPTY ARRAY 
     if (searchText.length === 0) {
         matches = [];
+        matchList.innerHTML = '';
     }
     outputHtml(matches);
 };
