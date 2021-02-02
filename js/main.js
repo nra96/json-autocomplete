@@ -12,6 +12,11 @@ const searchStates = async searchText => {
         return state.name.match(regex) || state.abbr.match(regex);
     });
 
+    //make INPUTBOX EMPTY RETURN EMPTY ARRAY 
+    if(searchText.length === 0){
+        matches = [];
+    }
+
 }
 
 search.addEventListener('input', () => searchStates(search.value));
